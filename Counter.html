@@ -1,0 +1,59 @@
+// CSS counter incriment helps you to modify both ordered and unorderd list, numbers, styles and symbols.
+// In CSS-3 two new counter properties are intoduced called. Counter-count and counter-incriment also a counter() function.
+// three of are three stages to impliment counter properly.
+
+// let's understand it by dividing the whole process into three simple steps.
+// Step #1.
+// Counter-reset: my-counter: 1;
+// Step #2.
+// Counter:content(my-counter);
+// Step#3.
+// Counter-incriment: my-counter 5;
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Counter</title>
+    <style>
+
+        body{
+            counter-reset: my-counter 0;
+        }
+
+        h2::before{
+            content:"Heading" " " counter(my-counter) ":";
+            counter-increment: my-counter 1;
+            font-weight: 500;
+            color: grey;
+            font-size: 25px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, soluta.
+    </p>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, soluta.
+    </p>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, soluta.
+    </p>
+  </body>
+</html>
+
+
