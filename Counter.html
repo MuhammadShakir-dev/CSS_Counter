@@ -24,11 +24,11 @@
         }
 
         h2::before{
-            content:"Heading" " " counter(my-counter) ":";
+            content:counter(my-counter, lower-roman) " ";
             counter-increment: my-counter 1;
-            font-weight: 500;
-            color: grey;
             font-size: 25px;
+            font-weight: 400;
+            color: grey;
         }
 
     </style>
